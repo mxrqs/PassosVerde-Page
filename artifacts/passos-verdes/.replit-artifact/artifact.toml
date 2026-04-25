@@ -1,0 +1,31 @@
+kind = "web"
+previewPath = "/"
+title = "Passos Verdes — Landing Page"
+version = "1.0.0"
+id = "artifacts/passos-verdes"
+router = "path"
+
+[[integratedSkills]]
+name = "react-vite"
+version = "1.0.0"
+
+[[services]]
+name = "web"
+paths = [ "/" ]
+localPort = 25503
+
+[services.development]
+run = "pnpm --filter @workspace/passos-verdes run dev"
+
+[services.production]
+build = [ "pnpm", "--filter", "@workspace/passos-verdes", "run", "build" ]
+publicDir = "artifacts/passos-verdes/dist/public"
+serve = "static"
+
+[[services.production.rewrites]]
+from = "/*"
+to = "/index.html"
+
+[services.env]
+PORT = "25503"
+BASE_PATH = "/"
