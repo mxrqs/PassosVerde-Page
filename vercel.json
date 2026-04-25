@@ -1,0 +1,20 @@
+{
+  "version": 2,
+  "buildCommand": "pnpm install && pnpm run build",
+  "outputDirectory": "artifacts/api-server/dist",
+  "installCommand": "pnpm install",
+  "env": {
+    "NODE_ENV": "production"
+  },
+  "functions": {
+    "artifacts/api-server/dist/index.mjs": {
+      "runtime": "nodejs20.x"
+    }
+  },
+  "routes": [
+    {
+      "src": "/(.*)",
+      "dest": "artifacts/api-server/dist/index.mjs"
+    }
+  ]
+}
