@@ -1,5 +1,4 @@
 uploads = []
-outputs = []
 
 [[generated]]
 id = "TOhWKsBTAd388jfNI3V9x"
@@ -18,3 +17,9 @@ id = "HNG9MQwsjNBtIzMsrI1nX"
 uri = "file://artifacts/passos-verdes/src/assets/community-finish.png"
 type = "image"
 title = "Community finish line joy"
+
+[[outputs]]
+id = "hbiGoWGtAviZWg-8_ugmJ"
+uri = "file://passos-verdes-static.tar.gz"
+type = "unspecified"
+title = "Passos Verdes — Site em HTML, CSS e JS (download)"
