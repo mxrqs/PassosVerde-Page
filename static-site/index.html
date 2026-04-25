@@ -1,0 +1,365 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Passos Verdes — assessoria de corrida online que tira você do sedentarismo e leva aos primeiros 5km em 8 semanas." />
+  <title>Passos Verdes — Saia do sedentarismo e corra seus primeiros 5km</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="styles.css" />
+  <link rel="icon" type="image/png" href="assets/logo.png" />
+</head>
+<body>
+
+  <!-- ========== QUESTIONÁRIO (gating) ========== -->
+  <div id="questionnaire" class="questionnaire" aria-modal="true" role="dialog">
+    <div class="q-bg-1"></div>
+    <div class="q-bg-2"></div>
+
+    <header class="q-header">
+      <div class="container q-narrow">
+        <div class="brand">
+          <img src="assets/logo.png" alt="Passos Verdes" class="brand-logo" />
+          <span class="brand-name">Passos<span class="text-primary">Verdes</span></span>
+        </div>
+      </div>
+    </header>
+
+    <div class="container q-narrow">
+      <div class="progress">
+        <div class="progress-bar" id="progress-bar" style="width: 17%"></div>
+      </div>
+      <p class="progress-label"><span id="progress-text">17%</span> concluído</p>
+    </div>
+
+    <main class="q-main container q-narrow">
+      <div class="q-card" id="q-card">
+        <!-- Steps são injetados pelo JS -->
+      </div>
+    </main>
+
+    <footer class="q-footer container q-narrow">
+      <p>Comunidade Passos Verdes — assessoria de corrida online para todo o Brasil.</p>
+    </footer>
+  </div>
+
+  <!-- ========== SITE PRINCIPAL ========== -->
+  <div id="site" class="site hidden">
+
+    <!-- Header fixo -->
+    <header class="site-header" id="site-header">
+      <div class="container header-inner">
+        <a href="#topo" class="brand">
+          <img src="assets/logo.png" alt="Passos Verdes" class="brand-logo" />
+          <span class="brand-name">Passos<span class="text-primary">Verdes</span></span>
+        </a>
+        <nav class="site-nav">
+          <a href="#como-funciona">Como Funciona</a>
+          <a href="#beneficios">Benefícios</a>
+          <a href="#planos">Planos</a>
+          <a href="#faq">FAQ</a>
+        </nav>
+        <a href="#planos" class="btn btn-primary btn-sm">Começar agora</a>
+      </div>
+    </header>
+
+    <main id="topo">
+
+      <!-- HERO -->
+      <section class="hero">
+        <div class="hero-bg-1"></div>
+        <div class="hero-bg-2"></div>
+        <div class="container hero-grid">
+          <div class="hero-text">
+            <span class="badge">Assessoria de corrida online para iniciantes</span>
+            <h1>Saia do sedentarismo e corra seus primeiros <span class="text-primary">5km em 8 semanas</span>.</h1>
+            <p class="lead">Sem cobranças irreais, sem pressa. Uma comunidade que entende o seu ritmo e não te deixa desistir no meio do caminho.</p>
+            <div class="social-proof">
+              <div class="avatars">
+                <div class="avatar"><img src="https://i.pravatar.cc/100?img=1" alt="" /></div>
+                <div class="avatar"><img src="https://i.pravatar.cc/100?img=5" alt="" /></div>
+                <div class="avatar"><img src="https://i.pravatar.cc/100?img=8" alt="" /></div>
+                <div class="avatar avatar-count">+1k</div>
+              </div>
+              <p>Mais de 1.000 alunos transformados.</p>
+            </div>
+          </div>
+          <div class="hero-card-wrap">
+            <div class="next-step-card" id="inscricao">
+              <div class="ns-head">
+                <span class="ns-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                </span>
+                <div>
+                  <p class="eyebrow">Próximo passo</p>
+                  <h3 id="ns-heading">Suas respostas estão salvas.</h3>
+                </div>
+              </div>
+              <p class="ns-body" id="ns-body">Seu plano está sendo montado pelo nosso time. Enquanto isso, escolha o nível de acompanhamento que combina com você — é o próximo passo pra começar de verdade.</p>
+              <a href="#planos" class="btn btn-primary btn-block">Ver os planos →</a>
+              <p class="ns-foot">
+                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                Vamos te chamar no WhatsApp em até 24h.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- DOR -->
+      <section class="painpoints">
+        <div class="container painpoints-grid">
+          <div class="pain-image">
+            <img src="assets/tired-person.png" alt="Pessoa cansada" />
+            <div class="pain-quote">
+              <p class="pq-title">"Será que eu consigo?"</p>
+              <p>Essa é a frase que mais ouvimos de quem chega até nós. E a resposta é sim.</p>
+            </div>
+          </div>
+          <div class="pain-text">
+            <h2>Você cansa subindo um lance de escada? <span class="text-secondary">Seu corpo está pedindo socorro.</span></h2>
+            <p class="lead-light">Sabemos como é o ciclo: você decide que vai mudar de vida, paga meses adiantados de uma academia que não gosta, vai por duas semanas, sente dores, se desmotiva e desiste. A culpa não é sua. O método tradicional não foi feito para quem está começando.</p>
+            <ul class="pain-list">
+              <li>
+                <span class="pain-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="6" width="16" height="12" rx="2"/><line x1="22" y1="11" x2="22" y2="13"/><line x1="6" y1="14" x2="6" y2="14"/><line x1="10" y1="10" x2="10" y2="14"/></svg>
+                </span>
+                <div><h4>Cansaço constante e falta de energia</h4><p>Trabalhar o dia todo sentado drena sua energia vital. O sedentarismo não te faz descansar, ele te deixa mais exausto.</p></div>
+              </li>
+              <li>
+                <span class="pain-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 12h-4l-3 9L9 3l-3 9H2"/></svg>
+                </span>
+                <div><h4>O corpo enferrujado</h4><p>Dores nas costas, má postura, joelhos estalando. O corpo humano foi desenhado para o movimento.</p></div>
+              </li>
+              <li>
+                <span class="pain-icon">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+                </span>
+                <div><h4>A ansiedade cobrando a conta</h4><p>A corrida não é apenas sobre o corpo, é a melhor válvula de escape para o estresse do dia a dia.</p></div>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- BENEFÍCIOS -->
+      <section class="benefits" id="beneficios">
+        <div class="container">
+          <div class="section-head section-head-left">
+            <span class="kicker">Por que correr muda tudo</span>
+            <h2>Não é só sobre perder peso.<br/><span class="text-primary">É sobre reaprender a viver.</span></h2>
+            <p class="lead">O sedentarismo é o cigarro silencioso do nosso tempo. Mata devagar, piora o humor, rouba a disposição. A boa notícia: o antídoto é barato, está debaixo dos seus pés, e você pode começar amanhã de manhã. A ciência da corrida é simples — quem corre, vive melhor.</p>
+          </div>
+
+          <div class="benefits-grid">
+            <article class="benefit"><span class="b-icon">❤️</span><h3>Coração mais forte</h3><p>30 minutos de corrida por semana já reduzem em até 30% o risco de doenças cardiovasculares. Seu coração bombeia melhor, sua pressão estabiliza.</p></article>
+            <article class="benefit"><span class="b-icon">🔥</span><h3>Queima calórica real</h3><p>Correr é uma das atividades que mais gasta calorias por minuto. Com constância, vem a perda de peso saudável — sem dietas malucas.</p></article>
+            <article class="benefit"><span class="b-icon">🧠</span><h3>Cabeça mais leve</h3><p>A corrida libera endorfina e serotonina. Estudos mostram redução de até 47% nos sintomas de ansiedade e depressão em quem corre regularmente.</p></article>
+            <article class="benefit"><span class="b-icon">🌙</span><h3>Sono profundo de verdade</h3><p>Quem corre dorme melhor e acorda mais disposto. O corpo cansado bem é o corpo que descansa de verdade.</p></article>
+            <article class="benefit"><span class="b-icon">😊</span><h3>Autoestima reconstruída</h3><p>Cada quilômetro vencido é uma prova pra você mesmo de que você consegue. Essa sensação não cabe em nenhuma promoção de academia.</p></article>
+            <article class="benefit"><span class="b-icon">🛡️</span><h3>Imunidade reforçada</h3><p>A prática regular de exercícios aeróbicos fortalece o sistema imunológico, reduz inflamações e te deixa menos vulnerável a doenças.</p></article>
+          </div>
+
+          <div class="benefits-quote">
+            <p class="kicker text-primary">O dado que ninguém te conta</p>
+            <h3>Quem corre regularmente vive, em média, 3 anos a mais — e com mais qualidade nesses anos extras.</h3>
+            <p>Fonte: estudos do British Journal of Sports Medicine. Não é sobre virar atleta. É sobre dar ao seu corpo o que ele foi feito pra fazer: se mover. A Passos Verdes existe pra te levar por essa transformação, no seu ritmo, com gente do seu lado.</p>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMO FUNCIONA -->
+      <section class="how" id="como-funciona">
+        <div class="container container-narrow">
+          <div class="section-head">
+            <h2>A Jornada dos 5km</h2>
+            <p class="lead">Esqueça aquele professor que grita no seu ouvido. Nosso método respeita o seu tempo e adapta-se à sua realidade.</p>
+          </div>
+          <div class="timeline">
+            <div class="t-line"></div>
+            <div class="t-step t-left"><div class="t-dot">1</div><div class="t-card"><span class="t-week">Semanas 1-2</span><h3>Despertar do Corpo</h3><p>Começamos devagar. Uma mistura de caminhada leve e trotes curtos. Seu coração e pulmões começam a entender a nova rotina sem sofrimento exagerado.</p></div></div>
+            <div class="t-step t-right"><div class="t-dot">2</div><div class="t-card"><span class="t-week">Semanas 3-4</span><h3>Construindo o Fôlego</h3><p>Os intervalos de corrida aumentam, a caminhada diminui. Você percebe que não está tão ofegante quanto antes. A endorfina começa a agir.</p></div></div>
+            <div class="t-step t-left"><div class="t-dot">3</div><div class="t-card"><span class="t-week">Semanas 5-6</span><h3>Resistência Base</h3><p>Neste ponto, correr já se tornou um hábito. Você já consegue manter um trote contínuo por mais tempo e seu corpo pede pelo treino.</p></div></div>
+            <div class="t-step t-right"><div class="t-dot">4</div><div class="t-card"><span class="t-week">Semanas 7-8</span><h3>A Linha de Chegada</h3><p>O corpo e a mente estão alinhados. O que antes parecia impossível acontece: você conclui seus primeiros 5km contínuos com um sorriso no rosto.</p></div></div>
+          </div>
+
+          <div class="how-included">
+            <h3>O que você recebe ao entrar?</h3>
+            <ul>
+              <li>✓ Planilha adaptativa pelo app</li>
+              <li>✓ Acesso ao grupo da comunidade</li>
+              <li>✓ Check-in e ajustes semanais</li>
+              <li>✓ Vídeos de técnica e educativos</li>
+              <li>✓ Ranking e gamificação</li>
+              <li>✓ Suporte humano via WhatsApp</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- COMUNIDADE -->
+      <section class="community">
+        <div class="container community-grid">
+          <div class="community-text">
+            <h2>A força do grupo faz você ir mais longe.</h2>
+            <p class="lead-light">A Passos Verdes é uma comunidade 100% online, mas com calor humano. Conectamos pessoas do Brasil inteiro que compartilham das mesmas dores e das mesmas vitórias.</p>
+            <ul class="community-list">
+              <li><span class="cl-icon cl-1">📍</span><div><h4>Nacional e Acessível</h4><p>Não importa de qual cidade você é. A assessoria vai com você no celular para o parque, rua ou esteira.</p></div></li>
+              <li><span class="cl-icon cl-2">🏆</span><div><h4>Gamificação e Prêmios</h4><p>Ranking semanal amigável. Atingiu a meta? Subiu de nível? Você ganha reconhecimento no grupo e concorre a mimos reais.</p></div></li>
+              <li><span class="cl-icon cl-3">🎯</span><div><h4>Novos Objetivos Sempre</h4><p>Concluiu os 5km? Ótimo! No próximo mês vamos focar em melhorar seu tempo, perder peso ou buscar os 10km. A jornada não para.</p></div></li>
+            </ul>
+          </div>
+          <div class="community-image">
+            <img src="assets/community-finish.png" alt="Grupo celebrando conquista" />
+            <div class="msg msg-1"><p class="msg-from">Thiago Treinador</p><p>Time, bora pra rua! Quem já fez o treino de hoje manda a foto! 🏃‍♂️💚</p></div>
+            <div class="msg msg-2"><p class="msg-from text-secondary">Camila (São Paulo)</p><p>Feitooo! Primeira vez que corro 3km sem parar. Não tô acreditando!</p></div>
+          </div>
+        </div>
+      </section>
+
+      <!-- PLANOS -->
+      <section class="pricing" id="planos">
+        <div class="container">
+          <div class="section-head">
+            <h2>Invista na sua saúde</h2>
+            <p class="lead">Escolha o plano que melhor se adapta ao seu momento e comprometa-se com a sua transformação.</p>
+          </div>
+
+          <div class="pricing-grid">
+            <article class="plan">
+              <h3>Desafio 5km</h3>
+              <p class="plan-desc">Para quem quer dar o primeiro passo</p>
+              <div class="plan-price"><span class="cur">R$</span><span class="val">47</span><span class="per">/pagamento único</span></div>
+              <a href="#planos" class="btn btn-outline btn-block">Começar o Desafio</a>
+              <ul>
+                <li>✓ Planilha fechada de 8 semanas</li>
+                <li>✓ Acesso à comunidade por 21 dias</li>
+                <li>✓ Dicas e educativos em vídeo</li>
+                <li>✓ Suporte básico</li>
+              </ul>
+            </article>
+
+            <article class="plan plan-highlight">
+              <span class="plan-badge">MAIS RECOMENDADO</span>
+              <h3>Comunidade Passos Verdes</h3>
+              <p class="plan-desc">O plano mais escolhido pelos alunos</p>
+              <div class="plan-price"><span class="cur">R$</span><span class="val">197</span><span class="per">/por mês</span></div>
+              <a href="#planos" class="btn btn-secondary btn-block">Assinar Comunidade</a>
+              <ul>
+                <li>✓ Planilha 100% personalizada</li>
+                <li>✓ App de treino exclusivo</li>
+                <li>✓ Acesso ao grupo VIP no WhatsApp</li>
+                <li>✓ Check-in semanal com treinador</li>
+                <li>✓ Ajustes ilimitados na planilha</li>
+                <li>✓ Participação em rankings e premiações</li>
+                <li>✓ Novo objetivo a cada mês</li>
+              </ul>
+            </article>
+
+            <article class="plan">
+              <h3>Mentoria Premium VIP</h3>
+              <p class="plan-desc">Acompanhamento de elite, 1 para 1</p>
+              <div class="plan-price"><span class="cur">R$</span><span class="val">997</span><span class="per">/por mês</span></div>
+              <a href="#planos" class="btn btn-outline btn-block">Aplicar para Mentoria</a>
+              <ul>
+                <li>✓ Tudo da Comunidade</li>
+                <li>✓ Treinador dedicado exclusivo</li>
+                <li>✓ Call mensal de alinhamento 1:1</li>
+                <li>✓ Acompanhamento nutricional parceiro</li>
+                <li>✓ Análise de biomecânica por vídeo</li>
+                <li>✓ Preparação para provas oficiais</li>
+              </ul>
+            </article>
+          </div>
+          <p class="pricing-foot">* A Comunidade Passos Verdes possui plano anual com desconto. Consulte as opções com nosso time.</p>
+        </div>
+      </section>
+
+      <!-- FAQ -->
+      <section class="faq" id="faq">
+        <div class="container container-narrow">
+          <div class="section-head">
+            <h2>Dúvidas Frequentes</h2>
+            <p class="lead">Ainda está inseguro? Respondemos as perguntas mais comuns.</p>
+          </div>
+          <div class="accordion" id="accordion">
+            <details class="acc-item"><summary>Já sou velho demais para começar a correr?</summary><div class="acc-body">Definitivamente não. Temos alunos que começaram aos 50, 60 anos. O segredo é ter um método progressivo, que intercala caminhada e corrida, respeitando as articulações e a resposta do seu corpo. A idade é apenas mais um fator que adaptamos na sua planilha.</div></details>
+            <details class="acc-item"><summary>Tenho uma lesão antiga, posso fazer a assessoria?</summary><div class="acc-body">Depende da lesão e da liberação médica. Recomendamos que você tenha o aval do seu ortopedista. Nossa planilha será construída considerando seu histórico, focando em exercícios de fortalecimento e evolução conservadora para não agravar nenhum quadro.</div></details>
+            <details class="acc-item"><summary>Não tenho muito tempo livre. Consigo encaixar na rotina?</summary><div class="acc-body">A falta de tempo é a desculpa de 90% dos nossos novos alunos. A realidade: você precisa de apenas 3 treinos de 30 a 40 minutos por semana. É menos tempo do que você gasta no Instagram. Como a planilha é no app, você faz o treino na hora que puder, onde estiver.</div></details>
+            <details class="acc-item"><summary>Funciona mesmo sendo 100% online?</summary><div class="acc-body">Sim! A assessoria online não é apenas um PDF enviado por email. É acompanhamento constante. Analisamos os dados que você sobe no app (pace, percepção de esforço) e ajustamos a rota. O grupo do WhatsApp traz o senso de pertencimento que muitas vezes falta na corrida solitária.</div></details>
+            <details class="acc-item"><summary>E se eu não gostar?</summary><div class="acc-body">Temos uma garantia incondicional de 7 dias. Você entra, acessa o app, fala com o treinador, recebe a primeira planilha e vê o grupo funcionando. Se achar que não é para você, devolvemos 100% do seu dinheiro sem letras miúdas.</div></details>
+          </div>
+        </div>
+      </section>
+
+      <!-- CTA FINAL -->
+      <section class="final-cta">
+        <div class="container">
+          <div class="final-grid">
+            <div class="final-text">
+              <h2>O tempo vai passar de qualquer jeito.</h2>
+              <p>Daqui a 8 semanas você pode continuar cansando ao subir a escada, ou pode estar cruzando a linha de chegada dos seus primeiros 5km. A escolha começa agora.</p>
+              <ul>
+                <li>✓ Garantia de 7 dias</li>
+                <li>✓ Acesso imediato à comunidade</li>
+                <li>✓ Planilha pronta hoje mesmo</li>
+              </ul>
+            </div>
+            <div class="final-card">
+              <div class="next-step-card next-step-card-dark">
+                <div class="ns-head">
+                  <span class="ns-icon">
+                    <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                  </span>
+                  <div>
+                    <p class="eyebrow">Próximo passo</p>
+                    <h3>Tudo pronto pra começar.</h3>
+                  </div>
+                </div>
+                <p class="ns-body">Já temos suas respostas. Agora é só escolher o nível de acompanhamento — entre na comunidade hoje mesmo e receba sua primeira planilha em até 24h.</p>
+                <a href="#planos" class="btn btn-primary btn-block">Escolher meu plano →</a>
+                <p class="ns-foot">
+                  <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"/></svg>
+                  Vamos te chamar no WhatsApp em até 24h.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+    </main>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <div class="footer-brand">
+          <h4>Passos<span class="text-primary">Verdes</span></h4>
+          <p>A assessoria de corrida online que transforma sedentários em corredores, respeitando o ritmo e a realidade do brasileiro.</p>
+        </div>
+        <div>
+          <h5>Links</h5>
+          <ul><li><a href="#planos">Planos</a></li><li><a href="#como-funciona">Como Funciona</a></li><li><a href="#beneficios">Benefícios</a></li><li><a href="#faq">FAQ</a></li></ul>
+        </div>
+        <div>
+          <h5>Contato</h5>
+          <ul><li><a href="#">WhatsApp</a></li><li><a href="#">Instagram</a></li><li><a href="#">contato@passosverdes.com.br</a></li></ul>
+        </div>
+      </div>
+      <div class="container footer-bottom">
+        <p>© <span id="year"></span> Passos Verdes Assessoria Esportiva. Todos os direitos reservados.</p>
+        <div><a href="#">Termos de Uso</a> · <a href="#">Política de Privacidade</a></div>
+      </div>
+    </footer>
+
+  </div>
+
+  <!-- Toast -->
+  <div id="toast" class="toast" role="status" aria-live="polite"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
