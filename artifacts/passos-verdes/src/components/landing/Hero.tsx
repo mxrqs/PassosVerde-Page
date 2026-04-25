@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LeadForm } from "./LeadForm";
+import { NextStepCard } from "./NextStepCard";
 
 export function Hero() {
   return (
@@ -52,12 +52,8 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="relative"
           >
-            <div id="inscricao" className="bg-card rounded-2xl shadow-xl border border-card-border p-6 md:p-8 max-w-md mx-auto lg:ml-auto relative z-10 scroll-mt-24">
-              <h3 className="text-2xl font-bold text-foreground mb-2">Dê o primeiro passo</h3>
-              <p className="text-muted-foreground mb-6 text-sm">
-                Preencha seus dados e nossa equipe montará o melhor plano para o seu momento atual.
-              </p>
-              <LeadForm />
+            <div id="inscricao" className="scroll-mt-24">
+              <NextStepCard />
             </div>
             
             {/* Subtle image peeking behind the form */}

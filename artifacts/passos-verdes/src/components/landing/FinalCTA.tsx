@@ -1,5 +1,5 @@
 import { motion } from "framer-motion";
-import { LeadForm } from "./LeadForm";
+import { NextStepCard } from "./NextStepCard";
 
 export function FinalCTA() {
   return (
@@ -33,9 +33,12 @@ export function FinalCTA() {
               </motion.div>
             </div>
 
-            <div className="p-8 md:p-12 bg-card border-l border-card-border/50">
-              <h3 className="text-2xl font-bold text-foreground mb-6">Preencha para começar</h3>
-              <LeadForm />
+            <div className="p-8 md:p-12 bg-card border-l border-card-border/50 flex items-center">
+              <NextStepCard
+                title="Tudo pronto pra começar."
+                description="Já temos suas respostas. Agora é só escolher o nível de acompanhamento — entre na comunidade hoje mesmo e receba sua primeira planilha em até 24h."
+                primaryLabel="Escolher meu plano"
+              />
             </div>
 
           </div>
