@@ -7,6 +7,7 @@ import type { IncomingMessage, ServerResponse } from "http";
 import type { ReqId } from "pino-http";
 
 // Tipos customizados para request com ID do pino-http
+// Versão: 1.0.1 - TypeScript strict mode fixes
 type PinoRequest = IncomingMessage & { id?: ReqId };
 type PinoResponse = ServerResponse;
 
