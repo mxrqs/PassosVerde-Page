@@ -1,25 +1,15 @@
 {
   "version": 2,
-  "buildCommand": "pnpm run build",
+  "buildCommand": "cd artifacts/passos-verdes && npx vite build --config vite.config.ts",
   "installCommand": "pnpm install",
+  "outputDirectory": "artifacts/passos-verdes/dist/public",
   "env": {
     "NODE_ENV": "production"
   },
   "rewrites": [
     {
-      "source": "/api/(.*)",
-      "destination": "/api/vercel.js"
-    },
-    {
       "source": "/(.*)",
-      "destination": "/artifacts/passos-verdes/dist/public/$1"
+      "destination": "/$1"
     }
-  ],
-  "functions": {
-    "api/vercel.js": {
-      "runtime": "vercel-node@latest",
-      "memory": 1024,
-      "maxDuration": 60
-    }
-  }
+  ]
 }
