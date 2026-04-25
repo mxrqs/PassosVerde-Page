@@ -3,7 +3,7 @@ import { LeadForm } from "./LeadForm";
 
 export function Hero() {
   return (
-    <section className="relative min-h-[90vh] flex items-center bg-background overflow-hidden pt-20 pb-16 lg:pt-0 lg:pb-0">
+    <section className="relative min-h-[90vh] flex items-center bg-background overflow-hidden pt-28 pb-16 lg:pt-32 lg:pb-12">
       {/* Decorative background elements */}
       <div className="absolute top-0 right-0 -translate-y-12 translate-x-1/3 w-2/3 h-2/3 bg-primary/10 rounded-full blur-3xl pointer-events-none" />
       <div className="absolute bottom-0 left-0 translate-y-1/3 -translate-x-1/4 w-1/2 h-1/2 bg-secondary/10 rounded-full blur-3xl pointer-events-none" />
@@ -52,7 +52,7 @@ export function Hero() {
             transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
             className="relative"
           >
-            <div className="bg-card rounded-2xl shadow-xl border border-card-border p-6 md:p-8 max-w-md mx-auto lg:ml-auto relative z-10">
+            <div id="inscricao" className="bg-card rounded-2xl shadow-xl border border-card-border p-6 md:p-8 max-w-md mx-auto lg:ml-auto relative z-10 scroll-mt-24">
               <h3 className="text-2xl font-bold text-foreground mb-2">Dê o primeiro passo</h3>
               <p className="text-muted-foreground mb-6 text-sm">
                 Preencha seus dados e nossa equipe montará o melhor plano para o seu momento atual.

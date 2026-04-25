@@ -1,10 +1,21 @@
+import logo from "@/assets/logo-passos-verdes.png";
+
 export function Footer() {
   return (
     <footer className="bg-foreground text-background/60 py-12 border-t border-background/10">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="grid md:grid-cols-4 gap-8 mb-8">
           <div className="md:col-span-2">
-            <h4 className="text-2xl font-extrabold text-background mb-4 tracking-tight">Passos<span className="text-primary">Verdes</span></h4>
+            <div className="flex items-center gap-3 mb-5">
+              <img
+                src={logo}
+                alt="Passos Verdes"
+                className="h-14 w-auto object-contain"
+              />
+              <h4 className="text-2xl font-extrabold text-background tracking-tight">
+                Passos<span className="text-primary">Verdes</span>
+              </h4>
+            </div>
             <p className="max-w-sm mb-6">
               A assessoria de corrida online que transforma sedentários em corredores, respeitando o ritmo e a realidade do brasileiro.
             </p>

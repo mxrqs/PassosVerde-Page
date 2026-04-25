@@ -31,7 +31,7 @@ const testimonials = [
 
 export function Testimonials() {
   return (
-    <section className="py-24 bg-background">
+    <section id="depoimentos" className="py-24 bg-background scroll-mt-24">
       <div className="container mx-auto px-4 sm:px-6">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold text-foreground mb-4">Pessoas reais, histórias reais</h2>

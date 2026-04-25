@@ -1,3 +1,4 @@
+import { Header } from "@/components/landing/Header";
 import { Hero } from "@/components/landing/Hero";
 import { PainPoints } from "@/components/landing/PainPoints";
 import { HowItWorks } from "@/components/landing/HowItWorks";
@@ -11,6 +12,7 @@ import { Footer } from "@/components/landing/Footer";
 export default function Home() {
   return (
     <div className="min-h-screen bg-background font-sans">
+      <Header />
       <main>
         <Hero />
         <PainPoints />
