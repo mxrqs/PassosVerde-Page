@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "pnpm install && pnpm run build",
+  "buildCommand": "pnpm run build",
   "installCommand": "pnpm install",
   "env": {
     "NODE_ENV": "production"
@@ -8,7 +8,7 @@
   "rewrites": [
     {
       "source": "/api/(.*)",
-      "destination": "/artifacts/api-server/dist/vercel.mjs"
+      "destination": "/api/vercel.js"
     },
     {
       "source": "/(.*)",
@@ -16,8 +16,8 @@
     }
   ],
   "functions": {
-    "artifacts/api-server/dist/vercel.mjs": {
-      "runtime": "nodejs20.x",
+    "api/vercel.js": {
+      "runtime": "vercel-node@latest",
       "memory": 1024,
       "maxDuration": 60
     }
