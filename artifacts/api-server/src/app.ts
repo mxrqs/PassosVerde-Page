@@ -1,8 +1,8 @@
-import express, { type Express, type Request, type Response } from "express";
+import express from "express";
 import cors from "cors";
 import { pinoHttp } from "pino-http";
-import router from "./routes";
-import { logger } from "./lib/logger";
+import router from "./routes/index.js";
+import { logger } from "./lib/logger.js";
 import type { IncomingMessage, ServerResponse } from "http";
 import type { ReqId } from "pino-http";
 
@@ -11,7 +11,7 @@ import type { ReqId } from "pino-http";
 type PinoRequest = IncomingMessage & { id?: ReqId };
 type PinoResponse = ServerResponse;
 
-const app: Express = express();
+const app = express();
 
 app.use(
   pinoHttp({
