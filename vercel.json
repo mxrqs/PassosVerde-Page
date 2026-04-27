@@ -1,15 +1,6 @@
 {
   "version": 2,
-  "buildCommand": "cd artifacts/passos-verdes && npx vite build --config vite.config.ts",
   "installCommand": "pnpm install",
-  "outputDirectory": "artifacts/passos-verdes/dist/public",
-  "env": {
-    "NODE_ENV": "production"
-  },
-  "rewrites": [
-    {
-      "source": "/(.*)",
-      "destination": "/$1"
-    }
-  ]
+  "buildCommand": "pnpm build",
+  "outputDirectory": "dist"
 }
